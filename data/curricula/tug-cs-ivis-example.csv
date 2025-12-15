@@ -1,0 +1,13 @@
+course_id;course_name;module_code;module_name;course_subcategory;course_type;credits;winter_semester;summer_semester;required_for_major;required_for_minor;recommended_semester;prerequisites;frequency;language;url
+INP.31048UF;Information Search and Retrieval;IVIS1,IVIS2;Interactive Visual and Information Systems;Interactive Systems and Information Retrieval;VU;5;TRUE;FALSE;TRUE;TRUE;1;XXX.YYY;yearly;EN;LINK
+706.007;Human-Centred Design;IVIS1,IVIS2;Interactive Visual and Information Systems;Interactive Systems and Information Retrieval;VU;3;FALSE;TRUE;TRUE;TRUE;2;YYY.XXX;yearly;EN;LINK
+706.705;Advanced Information Retrieval;IVIS1,IVIS2;Interactive Visual and Information Systems;Interactive Systems and Information Retrieval;VU;5;TRUE;FALSE;TRUE;FALSE;1;XXX.YYY,YYY.XXX;yearly;EN;LINK
+DAT.C409UF;Visual Analytics;IVIS1,IVIS2;Interactive Visual and Information Systems;Interactive Visualisation and Data Analysis;VU;5;FALSE;TRUE;TRUE;FALSE;2;;yearly;EN;LINK
+711.010;Digital Libraries;IVIS2;Interactive Visual and Information Systems;Interactive Systems and Information Retrieval;VU;3.5;TRUE;FALSE;FALSE;FALSE;;;yearly;EN;LINK
+706.034;Human-Centred AI: Applying User-Centred Design;IVIS2;Interactive Visual and Information Systems;Interactive Visualisation and Data Analysis;VU;4.5;FALSE;TRUE;FALSE;FALSE;;;yearly;EN;LINK
+DAT.C406UF;Information Visualisation;IVIS2;Interactive Visual and Information Systems;Interactive Visualisation and Data Analysis;VU;5;FALSE;TRUE;FALSE;FALSE;;;yearly;EN;LINK
+706.008;Human-AI Interaction 1;IVIS2;Interactive Visual and Information Systems;Human-Computer Interaction;VU;5;TRUE;FALSE;FALSE;FALSE;;;yearly;EN;LINK
+706.012;Human-AI Interaction 2;IVIS2;Interactive Visual and Information Systems;Human-Computer Interaction;VU;5;FALSE;TRUE;FALSE;FALSE;;;yearly;EN;LINK
+INP.30922UF;Game Design and Development;IVIS2;Interactive Visual and Information Systems;Computer Games and Learning;VU;5;TRUE;FALSE;FALSE;FALSE;;;yearly;EN;LINK
+706.041;Information Architecture and Web Usability;IVIS2;Interactive Visual and Information Systems;Mobile and Web Applications;VU;5;TRUE;FALSE;FALSE;FALSE;;;yearly;EN;LINK
+INP.32600UF;Mobile Applications;IVIS2;Interactive Visual and Information Systems;Mobile and Web Applications;VU;5;TRUE;FALSE;FALSE;FALSE;;;yearly;EN;LINK
