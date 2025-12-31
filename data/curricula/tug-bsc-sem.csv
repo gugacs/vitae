@@ -1,73 +1,73 @@
 course_id;course_name;module_code;module_name;course_subcategory;course_type;credits;required;availability;recommended_semester;prerequisites;frequency;language;description;url
-;Introduction to the Study Software Engineering and Management;A;Fundamentals of Computer Science;;OL;0,5;;W;1;;yearly;;This course could be described here.;
-;Automata Theory ;A;Fundamentals of Computer Science;;VO;3;;W;1;;yearly;;This course could be described here.;
-;Automata Theory ;A;Fundamentals of Computer Science;;KU;2;;W;1;;yearly;;This course could be described here.;
-;Data Structures and Algorithms;A;Fundamentals of Computer Science;;VU;7;;S;2;;yearly;;This course could be described here.;
-;Analysis 1 für Informatikstudien;B;Mathematics 1;;VU;7;;W;1;;yearly;;This course could be described here.;
-;Numerisches Rechnen und Lineare Algebra für Informatikstudien;B;Mathematics 1;;VU;7;;W;1;;yearly;;This course could be described here.;
-;Diskrete Mathematik für Informatikstudien;C;Mathematics 2;;VU;7;;S;2;;yearly;;This course could be described here.;
-;Wahrscheinlichkeitstheorie für Informatikstudien;C;Mathematics 2;;VU;3;;W;3;;yearly;;This course could be described here.;
-;Statistik für Informatikstudien;C;Mathematics 2;;VU;1.5;;S;4;;yearly;;This course could be described here.;
-;Computational Methods for Statistics;C;Mathematics 2;;VU;2.5;;W;5;;yearly;;This course could be described here.;
-;Introduction to Structured Programming;D;Programming 1;;VO;3;;W;1;;yearly;;This course could be described here.;
-;Introduction to Structured Programming;D;Programming 1;;KU;4;;W;1;;yearly;;This course could be described here.;
+710.000;Introduction to the Study Software Engineering and Management;A;Fundamentals of Computer Science;;OL;0,5;;W;1;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589117?$scrollTo=toc_overview
+705.001;Automata Theory ;A;Fundamentals of Computer Science;;VO;3;;W;1;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589118?$scrollTo=toc_overview
+716.005;Automata Theory ;A;Fundamentals of Computer Science;;KU;2;;W;1;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589119?$scrollTo=toc_overview
+721.000;Data Structures and Algorithms;A;Fundamentals of Computer Science;;VU;7;;S;2;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589120?$scrollTo=toc_overview
+501.449;Analysis 1 für Informatikstudien;B;Mathematics 1;;VU;7;;W;1;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/580594?$scrollTo=toc_overview
+501.071;Numerisches Rechnen und Lineare Algebra für Informatikstudien;B;Mathematics 1;;VU;7;;W;1;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/580239?$scrollTo=toc_overview
+505.006;Diskrete Mathematik für Informatikstudien;C;Mathematics 2;;VU;7;;S;2;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/575989?$scrollTo=toc_overview
+IND.03000UF;Wahrscheinlichkeitstheorie für Informatikstudien;C;Mathematics 2;;VU;3;;W;3;501.449,505.006;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/579323?$scrollTo=toc_overview
+IND.02004UF;Statistik für Informatikstudien;C;Mathematics 2;;VU;1.5;;S;4;IND.03000UF;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589116?$scrollTo=toc_overview
+706.026;Computational Methods for Statistics;C;Mathematics 2;;VU;2.5;;W;5;IND.03000UF,IND.02004UF;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/580036?$scrollTo=toc_overview
+706.979;Introduction to Structured Programming;D;Programming 1;;VO;3;;W;1;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589121?$scrollTo=toc_overview
+706.002;Introduction to Structured Programming;D;Programming 1;;KU;4;;W;1;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589122?$scrollTo=toc_overview
 716.018;Software Development Process;D;Programming 1;;VO;1.5;;S;2;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/595586?$scrollTo=toc_overview
-;Object-Oriented Programming 1;D;Programming 1;;VO;1.5;;S;2;;yearly;;This course could be described here.;
-;Object-Oriented Programming 1;D;Programming 1;;Ku;4;;S;2;;yearly;;This course could be described here.;
-;Object-Oriented Programming 2;D;Programming 1;;VO;1.5;;W;3;;yearly;;This course could be described here.;
-;Object-Oriented Programming 2;D;Programming 1;;KU;2.5;;W;3;;yearly;;This course could be described here.;
-;System Level Programming;E;Programming 2;;VU;3;;W;3;;yearly;;This course could be described here.;
-;Operating Systems;E;Programming 2;;VU;7;;S;4;;yearly;;This course could be described here.;
+706.002,710.001;Object-Oriented Programming 1,Object-Oriented Programming 1;D;Programming 1;;VO,VO;1.5,1.5;;S,W;2,2;710.000,706.979,706.002;yearly;EN,EN;This course could be described here.,This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/619641?$scrollTo=toc_overview,https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589124?$scrollTo=toc_overview
+706.014,710.002;Object-Oriented Programming 1,Object-Oriented Programming 1;D;Programming 1;;KU,KU;4,4;;S,W;2,2;710.000,706.979,706.002;yearly;EN,EN;This course could be described here.,This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/619642?$scrollTo=toc_overview,https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589125?$scrollTo=toc_overview
+710.003;Object-Oriented Programming 2;D;Programming 1;;VO;1.5;;W;3;706.002,706.014;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589126?$scrollTo=toc_overview
+710.004;Object-Oriented Programming 2;D;Programming 1;;KU;2.5;;W;3;706.002,706.014;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589126?$scrollTo=toc_overview
+705.004;System Level Programming;E;Programming 2;;VU;3;;W;3;706.979,706.002;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/579863?$scrollTo=toc_overview
+INP.32512UF;Operating Systems;E;Programming 2;;VU;7;;B;4;706.979,706.002,705.004;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/580089?$scrollTo=toc_overview
 716.006;Software Paradigms;E;Programming 2;;VU;4.5;;S;6;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589128?$scrollTo=toc_overview
 716.007;Declarative Programming;E;Programming 2;;VU;3;;S;6;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589129?$scrollTo=toc_overview
 INH.04062UF;Agile Software Development;F;Software Engineering;;VU;4;;W;5;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/576670?$scrollTo=toc_overview
 716.126;Object-Oriented Analysis and Design;F;Software Engineering;;VU;3;;W;5;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/525604?$scrollTo=toc_overview
 INP.32164UF;Software Maintenance;F;Software Engineering;;VU;4.5;;S;6;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/575063?$scrollTo=toc_overview
 716.030;Quality Assurance in Software Development;F;Software Engineering;;VU;2.5;;S;6;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589131?$scrollTo=toc_overview
-;Computer Organization and Networks;G;Information Processing;;VU;7;;W;3;;yearly;;This course could be described here.;
-;Data Management;G;Information Processing;;VO;3;;S;4;;yearly;;This course could be described here.;
-;Data Management;G;Information Processing;;KU;2;;S;4;;yearly;;This course could be described here.;
-;Information Security;G;Information Processing;;VO;4;;W;5;;yearly;;This course could be described here.;
-;Information Security;G;Information Processing;;KU;3;;W;5;;yearly;;This course could be described here.;
-;Artificial Intelligence 1;H;Information Processing 2;;VU;3;;W;3;;yearly;;This course could be described here.;
-;Human-Computer Interaction;H;Information Processing 2;;VU;4.5;;S;4;;yearly;;This course could be described here.;
-;Computer Graphics,Computer Vision;H;Information Processing 2;;VU,VU;3,3;;S,S;6,6;;yearly,yearly;;This course could be described here.;
-;Project Management in Software Engineering;I;Management 1;;VO;2;;S;2;;yearly;;This course could be described here.;
-;Project Management in Software Engineering;I;Management 1;;UE;5;;S;2;;yearly;;This course could be described here.;
-;Betriebssoziologie;I;Management 1;;VO;3;;W;3;;yearly;;This course could be described here.;
-;Rechnungswesen für Informatikstudien;I;Management 1;;VO;4;;W;3;;yearly;;This course could be described here.;
-;Betriebswirtschaftslehre;J;Management 2;;VO;4.5;;S;4;;yearly;;This course could be described here.;
-;Betriebswirtschaftslehre;J;Management 2;;UE;2;;S;4;;yearly;;This course could be described here.;
-;Technik-Ethik-Politik für Informatikstudien;J;Management 2;;VO;2;;S;2;;yearly;;This course could be described here.;
-;Bürgerliches Recht und Unternehmensrecht;J;Management 2;;VO;4.5;;W;5;;yearly;;This course could be described here.;
-;Introduction to Scientific Working;K;Bachelor Thesis and Scientific Work;;SE;2;;W;5;;yearly;;This course could be described here.;
-;Bachelor Thesis Software Engineering and Management;K;Bachelor Thesis and Scientific Work;;SP;10;;S;6;;yearly;;This course could be described here.;
-;Analysis 2 für Informatikstudien;L;Wahlmodul;;VU;7;;S;0;;yearly;;This course could be described here.;
-;Theoretical Computer Science;L;Wahlmodul;;VO;3;;S;0;;yearly;;This course could be described here.;
-;Theoretical Computer Science;L;Wahlmodul;;KU;2;;S;0;;yearly;;This course could be described here.;
-;Logic and Computability;L;Wahlmodul;;VO;3;;W;0;;yearly;;This course could be described here.;
-;Logic and Computability;L;Wahlmodul;;KU;2;;W;0;;yearly;;This course could be described here.;
-;Artificial Intelligence 2;L;Wahlmodul;;VU;3;;S;0;;yearly;;This course could be described here.;
-;Design and Analysis of Algorithms;L;Wahlmodul;;VU;7;;W;0;;yearly;;This course could be described here.;
+705.002;Computer Organization and Networks;G;Information Processing;;VU;7;;W;3;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589132?$scrollTo=toc_overview
+INF.01017UF;Data Management;G;Information Processing;;VO;3;;S;4;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/573823?$scrollTo=toc_overview
+706.003;Data Management;G;Information Processing;;KU;2;;S;4;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/573823?$scrollTo=toc_overview
+INP.33404UF;Information Security;G;Information Processing;;VO;4;;W;5;705.002;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/577252?$scrollTo=toc_overview
+INP.33503UF;Information Security;G;Information Processing;;KU;3;;W;5;705.002;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/580460?$scrollTo=toc_overview
+706.014;Artificial Intelligence 1;H;Information Processing 2;;VU;3;;W;3;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589134?$scrollTo=toc_overview
+INH.02021UF;Human-Computer Interaction;H;Information Processing 2;;VU;4.5;;S;4;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/575072?$scrollTo=toc_overview
+710.003,DGJ.40300UF;Computer Graphics,Computer Vision;H;Information Processing 2;;VU,VU;3,3;;S,S;6,6;;yearly,yearly;DE,DE;This course could be described here.,This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/526155?$scrollTo=toc_overview,https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/526155?$scrollTo=toc_overview
+706.650;Project Management in Software Engineering;I;Management 1;;VO;2;;S;2;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/600607?$scrollTo=toc_overview
+706.649;Project Management in Software Engineering;I;Management 1;;UE;5;;S;2;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/600608?$scrollTo=toc_overview
+373.314;Betriebssoziologie;I;Management 1;;VO;3;;W;3;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/577527?$scrollTo=toc_overview
+373.385;Rechnungswesen für Informatikstudien;I;Management 1;;VO;4;;W;3;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/579961?$scrollTo=toc_overview
+373.334;Betriebswirtschaftslehre;J;Management 2;;VO;4.5;;S;4;373.385;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/573784?$scrollTo=toc_overview
+373.335;Betriebswirtschaftslehre;J;Management 2;;UE;2;;S;4;373.385;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/573785?$scrollTo=toc_overview
+706.017;Technik-Ethik-Politik für Informatikstudien;J;Management 2;;VO;2;;S;2;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589137?$scrollTo=toc_overview
+373.336;Bürgerliches Recht und Unternehmensrecht;J;Management 2;;VO;4.5;;B;5;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/575982?$scrollTo=toc_overview
+700.502;Introduction to Scientific Working;K;Bachelor Thesis and Scientific Work;;SE;2;;B;5;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/598584?$scrollTo=toc_overview
+700.405;Bachelor Thesis Software Engineering and Management;K;Bachelor Thesis and Scientific Work;;SP;10;;B;6;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/597516?$scrollTo=toc_overview
+501.454;Analysis 2 für Informatikstudien;L;Wahlmodul;;VU;7;;S;0;501.449;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/575049?$scrollTo=toc_overview
+708.145;Theoretical Computer Science;L;Wahlmodul;;VO;3;;S;0;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/527564?$scrollTo=toc_overview
+708.146;Theoretical Computer Science;L;Wahlmodul;;KU;2;;S;0;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/524571?$scrollTo=toc_overview
+705.010;Logic and Computability;L;Wahlmodul;;VO;3;;W;0;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589245?$scrollTo=toc_overview
+705.011;Logic and Computability;L;Wahlmodul;;KU;2;;W;0;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589246?$scrollTo=toc_overview
+716.009;Artificial Intelligence 2;L;Wahlmodul;;VU;3;;S;0;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589226?$scrollTo=toc_overview
+721.002;Design and Analysis of Algorithms;L;Wahlmodul;;VU;7;;W;0;721.000;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/579188?$scrollTo=toc_overview
 721.020;Algorithms and Games;L;Wahlmodul;;VU;4;;W;0;INF.04032UF,INF.03031UF,INP.236UF;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/597195?$scrollTo=toc_overview
 710.020;Nonlinear Optimization;L;Wahlmodul;;VO;4.5;;W;0;501.449,501.071,501.454;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/549709?$scrollTo=toc_overview
 710.021;Nonlinear Optimization;L;Wahlmodul;;UE;2.5;;W;0;501.449,501.071,501.454;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/549710?$scrollTo=toc_overview
-;Machine Learning 1;L;Wahlmodul;;VU;4.5;;S;0;;yearly;;This course could be described here.;
-;User Interfaces;L;Wahlmodul;;VU;2;;S;0;;yearly;;This course could be described here.;
-;Microcontroller;L;Wahlmodul;;VO;2;;W;0;;yearly;;This course could be described here.;
-;Microcontroller;L;Wahlmodul;;UE;3;;W;0;;yearly;;This course could be described here.;
-;Technik und Ethik;L;Wahlmodul;;VO;1.5;;W;0;;yearly;;This course could be described here.;
-;Arbeitsrecht;L;Wahlmodul;;VO;3;;W;0;;yearly;;This course could be described here.;
-;Enabling Innovation;L;Wahlmodul;;VO;1.5;;S;0;;yearly;;This course could be described here.;
-;Enabling Innovation;L;Wahlmodul;;UE;3;;S;0;;yearly;;This course could be described here.;
-;Steuerrecht;L;Wahlmodul;;VO;3;;W;0;;yearly;;This course could be described here.;
-;Grundlagen der Industriebetriebslehre und Innovation;L;Wahlmodul;;VO;3;;W;0;;yearly;;This course could be described here.;
+708.003;Machine Learning 1;L;Wahlmodul;;VU;4.5;;S;0;501.449,501.071,IND.03000UF;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/589231?$scrollTo=toc_overview
+INP.33914UF;User Interfaces;L;Wahlmodul;;VU;2;;S;0;705.002;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/525769?$scrollTo=toc_overview
+INP.316UF;Microcontroller;L;Wahlmodul;;VO;2;;W;0;706.979,706.002,705.002;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/579765?$scrollTo=toc_overview
+INP.317UF;Microcontroller;L;Wahlmodul;;UE;3;;W;0;706.979,706.002,705.002;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/578856?$scrollTo=toc_overview
+433.104;Technik und Ethik;L;Wahlmodul;;VO;1.5;;W;0;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/578419?$scrollTo=toc_overview
+373.386;Arbeitsrecht;L;Wahlmodul;;VO;3;;W;0;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/578007?$scrollTo=toc_overview
+PHT.801UF;Enabling Innovation;L;Wahlmodul;;VO;1.5;;S;0;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/575462?$scrollTo=toc_overview
+PHT.802UF;Enabling Innovation;L;Wahlmodul;;UE;3;;S;0;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/575761?$scrollTo=toc_overview
+373.392;Steuerrecht;L;Wahlmodul;;VO;3;;W;0;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/577907?$scrollTo=toc_overview
+371.201;Grundlagen der Industriebetriebslehre und Innovation;L;Wahlmodul;;VO;3;;W;0;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/577783?$scrollTo=toc_overview
 ;AK Informatikrecht und Datenschutz;L;Wahlmodul;;VO;3;;S;0;;yearly;;This course could be described here.;
-;Grundlagen der Unternehmensführung und Organisation;L;Wahlmodul;;VO;3;;S;0;;yearly;;This course could be described here.;
-;Nachhaltige Technikgestaltung;L;Wahlmodul;;VU;4;;W;0;;yearly;;This course could be described here.;
-;Vielfalt im Zentrum der Forschung;L;Wahlmodul;;SE;3;;S;0;;yearly;;This course could be described here.;
-;Gesellschaftliche Aspekte der Informationstechnologie;L;Wahlmodul;;VU;3;;S;0;;yearly;;This course could be described here.;
-;Bachelor Project;L;Wahlmodul;;PT;5;;S;0;;yearly;;This course could be described here.;
-;Processor Architecture;L;Wahlmodul;;VO;3;;S;0;;yearly;;This course could be described here.;
-;Processor Architecture, Laboratory;L;Wahlmodul;;LU;1.5;;S;0;;yearly;;This course could be described here.;
-;Mentoring First Year Students;L;Wahlmodul;;SE;3;;B;0;;yearly;;This course could be described here.;
+372.236;Grundlagen der Unternehmensführung und Organisation;L;Wahlmodul;;VO;3;;S;0;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/524757?$scrollTo=toc_overview
+706.004;Nachhaltige Technikgestaltung;L;Wahlmodul;;VU;4;;W;0;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/579796?$scrollTo=toc_overview
+706.079;Vielfalt im Zentrum der Forschung;L;Wahlmodul;;SE;3;;S;0;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/524577?$scrollTo=toc_overview
+INL.02020UF;Gesellschaftliche Aspekte der Informationstechnologie;L;Wahlmodul;;VU;3;;S;0;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/592262?$scrollTo=toc_overview
+448.095;Bachelor Project;L;Wahlmodul;;PT;5;;S;0;;yearly;DE;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/524762?$scrollTo=toc_overview
+448.024;Processor Architecture;L;Wahlmodul;;VO;3;;S;0;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/526895?$scrollTo=toc_overview
+448.025;Processor Architecture, Laboratory;L;Wahlmodul;;LU;1.5;;S;0;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/526633?$scrollTo=toc_overview
+700.100;Mentoring First Year Students;L;Wahlmodul;;SE;3;;B;0;;yearly;EN;This course could be described here.;https://online.tugraz.at/tug_online/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/595538?$scrollTo=toc_overview
