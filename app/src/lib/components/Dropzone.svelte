@@ -11,9 +11,8 @@
   import FileDrop from "svelte-tauri-filedrop"
   import Papa from "papaparse";
   import type { Course, Curriculum, Module } from "$lib/types/data";
-  import { curriculum } from "$lib/states/curriculum.svelte";
+  import { curriculumStore } from "$lib/states/curriculum.svelte";
 
-  let fileContent: string = "None"
   const readFile = async (path: string) => {
     try {
       // NOTE: https://v2.tauri.app/plugin/file-system
@@ -121,7 +120,6 @@
 
       modules.push(module);
     }
-    console.log(modules)
 
     // Filling in all the possible data for courses
     let courses: Course[] = [];
@@ -154,7 +152,6 @@
           newRawCourse["language"] = splitLanguages[j];
           newRawCourse["description"] = splitDescriptions[j];
           newRawCourse["url"] = splitURLs[j];
-          console.log("test");
 
           rawCourses.push(newRawCourse);
         }
@@ -190,16 +187,12 @@
       }
     }
 
-    console.log(courses)
-
     // Creating final curriculum data structure
     let curriculum: Curriculum = {
       credits: -1,
       modules: modules,
       courses: courses
     }
-
-    console.log(curriculum);
 
     return curriculum;
   }
@@ -216,9 +209,8 @@
     const courses = data.data;
     const parsedCurriculum = parseToDataStructure(courses)
     // TODO: Store data structure in a global svelte store
-    curriculum.credits = parsedCurriculum.credits;
-    curriculum.modules = parsedCurriculum.modules;
-    curriculum.courses = parsedCurriculum.courses;
+    curriculumStore.set(parsedCurriculum);
+    console.log($curriculumStore);
   }
 </script>
 
@@ -227,8 +219,6 @@
     <h2>Drop CSV files</h2>
   </div>
 </FileDrop>
-
-<p>{JSON.stringify(curriculum)}</p>
 
 <style>
 .dropzone {
