@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Info, Pencil, CircleCheck, CircleX, CircleQuestionMark, X, GraduationCap, NotebookPen, Undo } from '@lucide/svelte';
+  import { Info, Pencil, CircleCheck, CircleX, CircleQuestionMark, X, GraduationCap, NotebookPen, Undo, Trash2 } from '@lucide/svelte';
   import { onMount } from 'svelte';
 
   let { course } =  $props();
@@ -98,6 +98,10 @@
     <button class="action-button"
             onclick={() => isEditing = !isEditing}>
       <Pencil size="1rem" />
+    </button>
+    <button class="action-button">
+      <!-- TODO delete course entry at click here -->
+      <Trash2 size="1rem" />
     </button>
     <button class="action-button"
             popovertarget={popoverId}>
