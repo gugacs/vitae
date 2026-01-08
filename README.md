@@ -1,4 +1,4 @@
-<h1 align="center">🎓 Vitae 🎓</h1>
+<h1 align="center">🎓 Degree Companion 🎓</h1>
 
 Simple web app to allow students to plan their academic journey in a simplified and understandable manner.
 
@@ -14,8 +14,8 @@ Simple web app to allow students to plan their academic journey in a simplified 
 
 ```bash
 # Clone the repository
-git clone git@github.com:gugacs/vitae.git
-cd vitae # Ensure you are in the project root
+git clone git@github.com:gugacs/degree-companion.git
+cd degree-companion # Ensure you are in the project root
 
 # Prepare the app
 cd app
@@ -34,7 +34,7 @@ bun install # OR: npm install
 ```bash
 # Terminal 1: Start App
 cd app # Ensure you are in the project root
-bun run tauri dev # Website Available at http://localhost:5173
+bun run tauri dev # New application window should open
 ```
 
 **Production Mode**
