@@ -70,6 +70,12 @@
   const parseCourse = (modules, rawCourse) => {
     const isMultiModule = rawCourse["module_code"].includes(";");
 
+    let prerequisites = [];
+    const prereqString = rawCourse["prerequisites"];
+    if (prereqString && prereqString.length > 0) {
+        prerequisites = prereqString.split(';').map(id => id.trim());
+    }
+
     const course: Course = {
       id: rawCourse["course_id"],
       name: rawCourse["course_name"],
@@ -80,7 +86,7 @@
       required: isMultiModule ? rawCourse["required"].split(";").map(r => parseInt(r)) : parseInt(rawCourse["required"]),
       availability: rawCourse["availability"],
       recommended_semester: isMultiModule ? rawCourse["recommended_semester"].split(";").map(s => parseInt(s)) : parseInt(rawCourse["recommended_semester"]),
-      prerequisites: [],
+      prerequisites: prerequisites,
       frequency: rawCourse["frequency"],
       language: rawCourse["language"],
       description: rawCourse["description"],
