@@ -4,17 +4,19 @@
     import { curriculumStore } from "$lib/states/curriculum.svelte";
     import CustomNode from "$lib/components/CustomNode.svelte";
     import CustomEdge from "$lib/components/CustomEdge.svelte";
+    import SemesterNode from "$lib/components/SemesterNode.svelte";
 
-    const nodeTypes = { custom: CustomNode };
+    const nodeTypes = { custom: CustomNode, header: SemesterNode };
     const edgeTypes = { custom: CustomEdge };
 
     let nodes = $state.raw([]);
     let edges = $state.raw([]);
 
     $effect(() => {
-      const showElectiveModules = false;
+      const showElectiveModules = true;
       const verticalSpacing = 300;
       const horizontalSpacing = 500;
+      const columnHeaderYPosition = -200;
 
       // filter if the elective modules should be shown or not
       const filteredCourses = showElectiveModules
@@ -39,6 +41,40 @@
       }, {});
 
       console.log(coursesBySemester);
+
+      const sortedSemesters = Object.keys(coursesBySemester).sort((a, b) => Number(a) - Number(b));
+
+      const headerNodes = sortedSemesters.map((semester, columnIndex) => {
+        if (parseInt(semester) == 0) {
+          return {
+            id: `header-${semester}`,
+            type: 'header',
+            position: {
+              x: columnIndex * horizontalSpacing,
+              y: columnHeaderYPosition
+            },
+            data: { label: 'Modules'},
+            draggable: false,
+            selectable: false,
+            connectable: false,
+            style: 'font-size: 1.5rem; font-weight: bold; text-align: center; width: 300px; background: transparent; border: none'
+          }
+        }
+
+        return {
+          id: `header-${semester}`,
+          type: 'header',
+          position: {
+            x: columnIndex * horizontalSpacing,
+            y: columnHeaderYPosition
+          },
+          data: { label: `Semester ${semester}`, semesterECTS: 30 },
+          draggable: false,
+          selectable: false,
+          connectable: false,
+          style: 'font-size: 1.5rem; font-weight: bold; text-align: center; width: 300px; background: transparent; border: none'
+        };
+      });
 
       const courseIdToNodeMap = new Map<string, { nodeId: string; semester: number }[]>();
 
@@ -95,6 +131,7 @@
             if (bestSource && bestSource.nodeId !== targetNode.id) {
               newEdges.push({
                 id: `e-${bestSource.nodeId}-${targetNode.id}`,
+                type: 'custom',
                 source: bestSource.nodeId,
                 target: targetNode.id,
               });
@@ -103,13 +140,13 @@
         }
       }
 
-      nodes = newNodes;
+      nodes = [...headerNodes, ...newNodes];
       edges = newEdges;
     });
 </script>
 
 <div style:height="80rem">
-  <SvelteFlow bind:nodes bind:edges {nodeTypes} >
+  <SvelteFlow bind:nodes bind:edges {nodeTypes} {edgeTypes} >
     <MiniMap />
     <Controls />
     <Background />
@@ -117,5 +154,8 @@
 </div>
 
 <style>
-
+  :global(.svelte-flow__edge-path) {
+    stroke: lightgrey;
+    stroke-width: 2;
+  }
 </style>
