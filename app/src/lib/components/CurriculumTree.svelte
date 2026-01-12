@@ -13,7 +13,7 @@
     let edges = $state.raw([]);
 
     $effect(() => {
-      const showElectiveModules = true;
+      const showElectiveModules = false; // default: false
       const verticalSpacing = 300;
       const horizontalSpacing = 500;
       const columnHeaderYPosition = -200;
@@ -68,7 +68,7 @@
             x: columnIndex * horizontalSpacing,
             y: columnHeaderYPosition
           },
-          data: { label: `Semester ${semester}`, semesterECTS: 30 },
+          data: { label: `Semester ${semester}`, semesterECTS: 26.5 },
           draggable: false,
           selectable: false,
           connectable: false,
@@ -104,6 +104,8 @@
           });
         });
 
+      const nodeIdToCourseMap = new Map(newNodes.map(node => [node.id, node.data.lv]));
+
       // iterate through all courses again to create edges
       const newEdges = [];
       for (const targetNode of newNodes) {
@@ -129,12 +131,18 @@
               .sort((a, b) => b.semester - a.semester)[0];
 
             if (bestSource && bestSource.nodeId !== targetNode.id) {
-              newEdges.push({
-                id: `e-${bestSource.nodeId}-${targetNode.id}`,
-                type: 'custom',
-                source: bestSource.nodeId,
-                target: targetNode.id,
-              });
+              const sourceCourse = nodeIdToCourseMap.get(bestSource.nodeId);
+
+              // Ensure we found the source course before creating the edge
+              if (sourceCourse) {
+                newEdges.push({
+                  id: `e-${bestSource.nodeId}-${targetNode.id}`,
+                  type: 'custom',
+                  source: bestSource.nodeId,
+                  target: targetNode.id,
+                  data: { sourceCourse: sourceCourse, targetCourse: targetCourse }
+                });
+              }
             }
           }
         }
@@ -145,8 +153,8 @@
     });
 </script>
 
-<div style:height="80rem">
-  <SvelteFlow bind:nodes bind:edges {nodeTypes} {edgeTypes} >
+<div style:height="60rem">
+  <SvelteFlow bind:nodes bind:edges {nodeTypes} {edgeTypes} fitView>
     <MiniMap />
     <Controls />
     <Background />
@@ -154,8 +162,5 @@
 </div>
 
 <style>
-  :global(.svelte-flow__edge-path) {
-    stroke: lightgrey;
-    stroke-width: 2;
-  }
+
 </style>

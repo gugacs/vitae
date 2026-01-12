@@ -17,6 +17,7 @@
 <main class="container">
   <h1>Vitae</h1>
   <Dropzone />
+  <a href="/graph">Go to graph visualization</a>
   <Legend />
   <CourseList />
 </main>
