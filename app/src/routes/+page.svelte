@@ -15,7 +15,7 @@
 </script>
 
 <main class="container">
-  <h1>Vitae</h1>
+  <h1>Degree Companion</h1>
   <Dropzone />
   <a href="/graph">Go to graph visualization</a>
   <Legend />

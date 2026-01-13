@@ -12,6 +12,7 @@
   import Papa from "papaparse";
   import type { Course, Curriculum, Module } from "$lib/types/data";
   import { curriculumStore } from "$lib/states/curriculum.svelte";
+  import { FileDown } from "@lucide/svelte";
 
   const readFile = async (path: string) => {
     try {
@@ -213,7 +214,8 @@
 
 <FileDrop extensions={["csv"]} handleFiles={handleDrop} let:files>
   <div class="dropzone" class:droppable={files.length == 1}>
-    <h2>Drop CSV files</h2>
+    <h2>Please provide us with your curriculum </h2>
+    <FileDown/>
   </div>
 </FileDrop>
 
