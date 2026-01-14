@@ -112,7 +112,6 @@
     background-color: #007bff;
     border-radius: 1rem;
     border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
     text-align: center;
@@ -124,8 +123,8 @@
 
   table {
     border-spacing: 0;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
+    border-top: 0.1rem solid black;
+    border-left: 0.1rem solid black;
   }
 
   th {
@@ -133,15 +132,15 @@
     top: 0;
     z-index: 10;
     background-color: lightgrey;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    border-right: 1px solid black;
+    border-bottom: 0.1rem solid black;
+    border-right: 0.1rem solid black;
+    border-right: 0.1rem solid black;
     padding: 0.5rem;
   }
 
   td {
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    border-bottom: 0.1rem solid black;
+    border-right: 0.1rem solid black;
     font-size: 0.8rem;
     font-weight: 500;
   }
