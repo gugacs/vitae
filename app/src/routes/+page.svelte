@@ -18,9 +18,7 @@
 <main class="container">
   <h1>Vitae</h1>
   <Dropzone />
-  <Legend />
   <CourseListTable />
-  <CourseList />
 </main>
 
 <style>
