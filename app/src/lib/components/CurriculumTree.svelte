@@ -225,13 +225,59 @@
 
       // calculate the exact x-coordinate for that column
       const snappedX = closestColumnIndex * horizontalSpacing;
+      const droppedY = draggedNode.position.y;
+
+      // get the list of semesters by looking at the header nodes already on the graph
+      const sortedHeaders = nodes
+        .filter(n => n.type === 'header')
+        .sort((a, b) => a.position.x - b.position.x);
+
+      if (closestColumnIndex < 0 || closestColumnIndex >= sortedHeaders.length) {
+        return;
+      }
+
+      const newHeaderNode = sortedHeaders[closestColumnIndex];
+      const newSemester = parseInt(newHeaderNode.id.replace('header-', ''));
+
+      // find the course and old semester
+      const courseToMove = draggedNode.data.lv;
+      const courseInStore = $curriculumStore.courses.find(c => c.id === courseToMove.id);
+      if (!courseInStore) return;
+
+      const oldSemester = parseInt(courseInStore.recommended_semester);
+
+      if (newSemester === oldSemester) {
+        nodes = nodes.map(node => {
+          if (node.id === draggedNode.id) {
+            // Only the Y position might have changed
+            return { ...node, position: { x: snappedX, y: droppedY } };
+          }
+          return node;
+        });
+        return;
+      }
+
+      // update node position and ECTS in headers
+      const courseCredits = parseFloat(courseToMove.credits || 0);
 
       nodes = nodes.map(node => {
         if (node.id === draggedNode.id) {
-          return { ...node, position: { y: draggedNode.position.y, x: snappedX } }; // return a new node object with the updated x position
+          return { ...node, position: { x: snappedX, y: droppedY } };
+        }
+
+        if (node.id === `header-${oldSemester}`) {
+          const newECTS = (node.data.semesterECTS || 0) - courseCredits;
+          return { ...node, data: { ...node.data, semesterECTS: newECTS } };
+        }
+
+        if (node.id === `header-${newSemester}`) {
+          const newECTS = (node.data.semesterECTS || 0) + courseCredits;
+          return { ...node, data: { ...node.data, semesterECTS: newECTS } };
         }
         return node;
       });
+
+      courseInStore.recommended_semester = newSemester.toString();
     }
 
     // variables for graph controls
