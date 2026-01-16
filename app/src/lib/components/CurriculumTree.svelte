@@ -34,15 +34,19 @@
 
       // group courses by semester
       const coursesBySemester = filteredCourses.reduce((acc, course) => {
-        let semester = parseInt(course.recommended_semester); // parseInt to handle strings like "2;2" and convert to a number
+        let semester = parseInt(course.recommended_semester);
 
         if (isNaN(semester)) {
           semester = 0; // default to semester 0 if parsing fails
         }
         if (!acc[semester]) {
-          acc[semester] = [];
+          acc[semester] = { courses: [], totalECTS: 0 };
         }
-        acc[semester].push(course);
+
+        // Add the course to the array
+        acc[semester].courses.push(course);
+        acc[semester].totalECTS += parseFloat(course.credits || 0);
+
         return acc;
       }, {});
 
@@ -74,7 +78,7 @@
             x: columnIndex * horizontalSpacing,
             y: columnHeaderYPosition
           },
-          data: { label: `Semester ${semester}`, semesterECTS: 26.5 },
+          data: { label: `Semester ${semester}`, semesterECTS: coursesBySemester[semester].totalECTS },
           draggable: false,
           selectable: false,
           connectable: false,
@@ -88,7 +92,7 @@
       const newNodes = Object.keys(coursesBySemester)
         .sort((a, b) => Number(a) - Number(b))
         .flatMap((semester, columnIndex) => {
-          const coursesInSemester = coursesBySemester[semester];
+          const coursesInSemester = coursesBySemester[semester].courses;
 
           return coursesInSemester.map((course, rowIndex) => {
             const nodeId = `${course.id}-${semester}-${rowIndex}`; // Unique ID
@@ -156,7 +160,7 @@
 
       // calculate the maximum height needed for the separators
       const maxCoursesInSemester = Math.max(
-        ...Object.values(coursesBySemester).map((courses: any[]) => courses.length)
+        ...Object.values(coursesBySemester).map((semesterData) => semesterData.courses.length)
       );
 
       // calculate total height from the top of the first node to the bottom of the last
