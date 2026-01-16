@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { SvelteFlow, MiniMap, Controls, Background } from '@xyflow/svelte';
+    import { SvelteFlow, MiniMap, Controls, Background, type Node } from '@xyflow/svelte';
     import '@xyflow/svelte/dist/style.css';
     import { curriculumStore } from "$lib/states/curriculum.svelte";
     import CustomNode from "$lib/components/CustomNode.svelte";
@@ -18,10 +18,11 @@
     let nodes = $state.raw([]);
     let edges = $state.raw([]);
 
+    const verticalSpacing = 300;
+    const horizontalSpacing = 500;
+
     $effect(() => {
       const showElectiveModules = false; // default: false
-      const verticalSpacing = 300;
-      const horizontalSpacing = 500;
       const columnHeaderYPosition = -200;
 
       // filter if the elective modules should be shown or not
@@ -211,6 +212,30 @@
       edges = newEdges;
     });
 
+    function handleNodeDragStop(node: Node) {
+      const draggedNode = node.targetNode;
+
+      // only apply snapping to course nodes, not headers or separators
+      if (draggedNode.type !== 'custom' || !draggedNode.position) {
+        return;
+      }
+
+      // calculate the closest column index based on the node's final x position
+      const closestColumnIndex = Math.round(draggedNode.position.x / horizontalSpacing);
+
+      // calculate the exact x-coordinate for that column
+      const snappedX = closestColumnIndex * horizontalSpacing;
+
+      console.log(snappedX);
+
+      nodes = nodes.map(node => {
+        if (node.id === draggedNode.id) {
+          return { ...node, position: { y: draggedNode.position.y, x: snappedX } }; // return a new node object with the updated x position
+        }
+        return node;
+      });
+    }
+
     // variables for graph controls
     let strokeWidth = $state(2);
     let strokeColor = $state('#000000');
@@ -237,7 +262,8 @@
       {nodeTypes}
       {edgeTypes}
       fitView
-      style="--stroke-width: {strokeWidth}; --stroke-color: {strokeColor};">
+      style="--stroke-width: {strokeWidth}; --stroke-color: {strokeColor};"
+      onnodedragstop={handleNodeDragStop}>
       <MiniMap />
       <Controls />
       <Background />
