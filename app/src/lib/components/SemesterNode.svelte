@@ -7,7 +7,7 @@
   <h2>{data.label} {data.semesterNumber}</h2>
 
   {#if data.label !== 'Modules'}
-    <h3>{data.semesterECTS}/30 ECTS</h3>
+    <h3>{data.semesterECTS} ECTS</h3>
   {/if}
 
 </div>
