@@ -5,8 +5,14 @@
     import CustomNode from "$lib/components/CustomNode.svelte";
     import CustomEdge from "$lib/components/CustomEdge.svelte";
     import SemesterNode from "$lib/components/SemesterNode.svelte";
+    import HorizontalSeparatorNode from "$lib/components/HorizontalSeparatorNode.svelte";
+    import VerticalSeparatorNode from "$lib/components/VerticalSeparatorNode.svelte";
 
-    const nodeTypes = { custom: CustomNode, header: SemesterNode };
+    const nodeTypes = {
+      custom: CustomNode,
+      header: SemesterNode,
+      horizontalSeparator: HorizontalSeparatorNode,
+      verticalSeparator: VerticalSeparatorNode };
     const edgeTypes = { custom: CustomEdge };
 
     let nodes = $state.raw([]);
@@ -148,7 +154,56 @@
         }
       }
 
-      nodes = [...headerNodes, ...newNodes];
+      // calculate the maximum height needed for the separators
+      const maxCoursesInSemester = Math.max(
+        ...Object.values(coursesBySemester).map((courses: any[]) => courses.length)
+      );
+
+      // calculate total height from the top of the first node to the bottom of the last
+      const verticalSeparatorHeight = (maxCoursesInSemester - 1) * verticalSpacing + 100;
+
+      // create the separators
+      const verticalSeparatorNodes = sortedSemesters
+        .slice(0, -1)
+        .map((_, columnIndex) => {
+          const xPosition = (columnIndex + 0.75) * horizontalSpacing;
+
+          return {
+            id: `separator-${columnIndex}`,
+            type: 'verticalSeparator',
+            position: { x: xPosition, y: -50 },
+            draggable: false,
+            selectable: false,
+            connectable: false,
+            style: `height: ${verticalSeparatorHeight}px; width: 0.2rem;`,
+            zIndex: -1
+          };
+        });
+
+      // create the horizontal separator between semesters and courses
+      const horizontalSeparatorNodes = sortedSemesters.map((_, columnIndex) => {
+        const xPosition = columnIndex * horizontalSpacing - (horizontalSpacing / 4);
+        const yPosition = columnHeaderYPosition + 150;
+        const lineWidth = horizontalSpacing / 15;
+
+        return {
+          id: `h-separator-${columnIndex}`,
+          type: 'horizontalSeparator',
+          position: { x: xPosition, y: yPosition },
+          draggable: false,
+          selectable: false,
+          connectable: false,
+          style: `height: 2rem; width: ${lineWidth}rem;`,
+          zIndex: -1
+        };
+      });
+
+      nodes = [
+        ...headerNodes,
+        ...newNodes,
+        ...verticalSeparatorNodes,
+        ...horizontalSeparatorNodes
+      ];
       edges = newEdges;
     });
 
